@@ -7,7 +7,7 @@ function telephoneCheck(str) {
         }
     else if (str.match(/\d/g).length === 11) //11digits
         {
-            if (str.match(/\d/g)[0] === 1) //check whether 1st digit is 1
+            if (str.match(/\d/g)[0] == 1) //check whether 1st digit is 1; debug: since '1' is string, use == instead of ===
                 {   // check whether it is valid phone number for 11digits
                     let regex11 = /^1( (\d{3}(-\d{3}-| \d{3} |\d{3})|\(\d{3}\)( |)\d{3}-)|\(\d{3}\)( |)\d{3}-)\d{4}$/;
                     return regex11.test(str);
